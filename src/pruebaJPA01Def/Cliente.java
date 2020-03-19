@@ -109,6 +109,19 @@ public class Cliente extends Entidad implements Serializable {
 
 		return venta;
 	}
+	
+	@Override
+	public String toString() {
+		return nombre;
+	}
+	
+	public boolean equals(Object obj) {
+		Cliente cl = (Cliente) obj;
+		if(this.id == cl.id) {
+			return true;
+		}
+		return false;
+	}
 
 	public Venta removeVenta(Venta venta) {
 		getVentas().remove(venta);
