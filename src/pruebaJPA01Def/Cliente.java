@@ -112,7 +112,7 @@ public class Cliente extends Entidad implements Serializable {
 	
 	@Override
 	public String toString() {
-		return nombre;
+		return nombre + " " + apellidos;
 	}
 	
 	public boolean equals(Object obj) {

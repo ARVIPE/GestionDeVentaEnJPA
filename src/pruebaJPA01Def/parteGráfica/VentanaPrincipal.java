@@ -1,15 +1,19 @@
 package pruebaJPA01Def.parteGráfica;
 
-import java.awt.Dimension;
+import java.awt.BorderLayout;
+import java.awt.Dimension;	
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JTabbedPane;
 
 import pruebaJPA01Def.utils.Apariencia;
 import pruebaJPA01Def.utils.CacheImagenes;
+import pruebaJPA01Def.parteGráfica.Menu;
+//import pruebaJPA01Def.parteGráfica.ToolBar;
 
 
 public class VentanaPrincipal extends JFrame {
@@ -20,6 +24,8 @@ public class VentanaPrincipal extends JFrame {
 
 	private CacheImagenes cacheImagenes;
 	public static BufferedImage iconoApp;
+	
+	static JTabbedPane jTabbedPane = new JTabbedPaneGestion();
 
 	// Establecer la apariencia típica de Windows
 	static {
@@ -40,9 +46,17 @@ public class VentanaPrincipal extends JFrame {
 		
 		agregarGestionCierreAplicacion();
 		
+		// Menú de la aplicación
+		this.setJMenuBar(new Menu());
+
 		// Construcción elementos básicos sobre el ContentPanel
-		this.setContentPane(new JTabbedPaneGestion());
+		this.getContentPane().setLayout(new BorderLayout());
+		this.getContentPane().add(jTabbedPane, BorderLayout.CENTER);
+		
+	
+		
 	}
+	
 
 	
 		
