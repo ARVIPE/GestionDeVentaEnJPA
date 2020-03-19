@@ -260,7 +260,7 @@ public class PanelGestionCliente extends JPanel {
 		nuevoRegistro.setLocalidad(this.jtfLocalidad.getText());
 		nuevoRegistro.setDniNie(this.jtfDniNie.getText());
 		nuevoRegistro.setFechaNac(sdf.parse(this.jtfFechaNac.getText()));
-		nuevoRegistro.setActivo(Boolean.getBoolean(this.jtfActivo.getText()));
+		nuevoRegistro.setActivo(Boolean.parseBoolean(this.jtfActivo.getText()));
 		
 		if (nuevoRegistro.getId() == 0) {
 			ClienteControlador.getControlador().persist(nuevoRegistro);

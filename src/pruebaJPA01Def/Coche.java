@@ -93,7 +93,7 @@ public class Coche extends Entidad implements Serializable {
 	
 	@Override
 	public String toString() {
-		return bastidor;
+		return modelo + "-" + color;
 	}
 	
 	public boolean equals(Object obj) {

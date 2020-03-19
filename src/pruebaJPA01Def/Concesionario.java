@@ -80,7 +80,7 @@ public class Concesionario extends Entidad implements Serializable {
 	
 	@Override
 	public String toString() {
-		return cif;
+		return nombre;
 	}
 	
 	public boolean equals(Object obj) {
