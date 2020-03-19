@@ -11,6 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -40,7 +41,7 @@ public class PanelGestionCliente extends JPanel {
 	JTextField jtfLocalidad = new JTextField(40);
 	JTextField jtfDniNie = new JTextField(9);
 	JTextField jtfFechaNac = new JTextField(9);
-	JTextField jtfActivo = new JTextField(9);
+	JCheckBox jtfActivo = new JCheckBox();
 	
 	
 	Cliente actual = null;
@@ -239,7 +240,7 @@ public class PanelGestionCliente extends JPanel {
 		this.jtfLocalidad.setText("");
 		this.jtfDniNie.setText("");
 		this.jtfFechaNac.setText("");
-		this.jtfActivo.setText("");
+		this.jtfActivo.setSelected(true);
 	}
 	
 	
@@ -358,7 +359,7 @@ public class PanelGestionCliente extends JPanel {
 			this.jtfLocalidad.setText(this.actual.getLocalidad());
 			this.jtfDniNie.setText(this.actual.getDniNie());
 			this.jtfFechaNac.setText(sdf.format(this.actual.getFechaNac()));
-			this.jtfActivo.setText(Boolean.toString(this.actual.getActivo()));
+			this.jtfActivo.setSelected(this.actual.getActivo());
 		}
 	}
 }
