@@ -1,6 +1,6 @@
 package pruebaJPA01Def.parteGráfica;
 
-import java.awt.BorderLayout;
+import java.awt.BorderLayout;	
 import java.awt.Dimension;	
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -12,8 +12,9 @@ import javax.swing.JTabbedPane;
 
 import pruebaJPA01Def.utils.Apariencia;
 import pruebaJPA01Def.utils.CacheImagenes;
+import pruebaJPA01Def.parteGráfica.ToolBar;
 import pruebaJPA01Def.parteGráfica.Menu;
-//import pruebaJPA01Def.parteGráfica.ToolBar;
+
 
 
 public class VentanaPrincipal extends JFrame {
@@ -51,6 +52,7 @@ public class VentanaPrincipal extends JFrame {
 
 		// Construcción elementos básicos sobre el ContentPanel
 		this.getContentPane().setLayout(new BorderLayout());
+		this.add(new ToolBar(), BorderLayout.NORTH);
 		this.getContentPane().add(jTabbedPane, BorderLayout.CENTER);
 		
 	
