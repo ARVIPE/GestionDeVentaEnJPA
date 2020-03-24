@@ -1,6 +1,6 @@
 package pruebaJPA01Def.parteGráfica;
 
-import java.awt.Color;
+import java.awt.Color;	
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -107,7 +107,7 @@ public class PanelGestionVenta extends JPanel {
 	    c.anchor = GridBagConstraints.WEST;
 		this.add(jtfidCliente, c);
 		
-		// Inclusiï¿½n del campo "IdFab"
+		// Inclusiï¿½n del campo "IdCliente"
 		List<Cliente> clientes = ClienteControlador.getControlador().findAll();
 
 		for (Cliente cl : clientes) {
@@ -189,7 +189,7 @@ public class PanelGestionVenta extends JPanel {
 	private JPanel getPanelNavegacion () {
 		JPanel pnl = new JPanel();
 
-		pnl.setBackground(Color.RED);
+		pnl.setBackground(Color.GREEN);
 		
 		JButton jbtPrimero = new JButton("Primero");
 		asignarFuncion(jbtPrimero, LOAD_FIRST);

@@ -169,7 +169,7 @@ public class PanelGestionCliente extends JPanel {
 	private JPanel getPanelNavegacion () {
 		JPanel pnl = new JPanel();
 
-		pnl.setBackground(Color.RED);
+		pnl.setBackground(Color.YELLOW);
 		
 		JButton jbtPrimero = new JButton("Primero");
 		asignarFuncion(jbtPrimero, LOAD_FIRST);

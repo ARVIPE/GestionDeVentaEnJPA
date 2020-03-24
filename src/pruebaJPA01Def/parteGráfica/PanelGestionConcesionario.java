@@ -129,7 +129,7 @@ public class PanelGestionConcesionario extends JPanel {
 	private JPanel getPanelNavegacion () {
 		JPanel pnl = new JPanel();
 
-		pnl.setBackground(Color.RED);
+		pnl.setBackground(Color.ORANGE);
 		
 		JButton jbtPrimero = new JButton("Primero");
 		asignarFuncion(jbtPrimero, LOAD_FIRST);
